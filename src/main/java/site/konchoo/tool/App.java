@@ -14,7 +14,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage appStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("app.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/app.fxml"));
         appStage.setTitle("Simple Hexo Append Category And Tags Tool");
         appStage.setScene(new Scene(root, 500, 640));
         appStage.show();
