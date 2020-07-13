@@ -2,9 +2,9 @@ package site.konchoo.tool.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import site.konchoo.tool.parameter.ComponentParameter;
 import site.konchoo.tool.components.CommonComponent;
 import site.konchoo.tool.file.MarkdownFileProcessor;
+import site.konchoo.tool.parameter.ComponentParameter;
 
 import java.io.File;
 import java.time.format.DateTimeFormatter;

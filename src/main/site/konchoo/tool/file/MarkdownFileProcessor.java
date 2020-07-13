@@ -1,6 +1,7 @@
 package site.konchoo.tool.file;
 
 import javafx.scene.control.TextArea;
+import org.apache.commons.lang3.StringUtils;
 import site.konchoo.tool.constants.AppConst;
 import site.konchoo.tool.parameter.ComponentParameter;
 import site.konchoo.tool.utils.ListUtils;
@@ -27,7 +28,7 @@ public final class MarkdownFileProcessor {
                 String line;
                 logInfoTextArea.appendText(LogsUtils.printLog("loading markdown file , path : " + markdownFile.getAbsolutePath()));
                 while ((line = bufferedReader.readLine()) != null) {
-                    if ("".equals(line.replaceAll(" ", ""))) continue;
+                    if (StringUtils.isBlank(line)) continue;
                     markdownTextLineList.add(line);
                 }
                 logInfoTextArea.appendText(LogsUtils.printLog("loading markdown file done."));
@@ -69,7 +70,7 @@ public final class MarkdownFileProcessor {
             try {
                 final Object value = field.get(componentParameter);
                 if (value instanceof String) {
-                    if (!"".equals(value)) infoList.add(field.getName() + ": " + value);
+                    if (StringUtils.isNotEmpty((String) value)) infoList.add(field.getName() + ": " + value);
                 } else if (value instanceof Boolean && (boolean) value) {
                     BasicFileAttributes attrs = Files.readAttributes(markdownFile.toPath(), BasicFileAttributes.class);
                     String createdTime = AppConst.sdf.format(new Date(attrs.creationTime().toMillis()));
@@ -79,7 +80,9 @@ public final class MarkdownFileProcessor {
                     } else infoList.add("date: " + lastModifyTime);
                 }
             } catch (IllegalAccessException | IOException e) {
-                e.printStackTrace();
+                StringWriter stringWriter = new StringWriter();
+                e.printStackTrace(new PrintWriter(stringWriter));
+                LogsUtils.printLog(stringWriter.toString());
             }
         }
         infoList.add(AppConst.INFO_BODY);
