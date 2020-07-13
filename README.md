@@ -9,4 +9,4 @@ Required: JDK8+
 
 ##### Usage：
  
-download the release jar then open cmd type `java -jar hexo-category-tag-tool-1.0.jar` to run,enjoy it!
+download the release jar.zip then open cmd type `java -jar hexo-category-tag-tool-1.0.jar` to run,enjoy it!
