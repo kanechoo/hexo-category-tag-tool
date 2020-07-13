@@ -8,4 +8,5 @@ Required: JDK8+
 需要JDK8+
 
 ##### Usage：
-
+ 
+download the release jar then open cmd type `java -jar hexo-category-and-tag-tool.jar` to run,enjoy it!
