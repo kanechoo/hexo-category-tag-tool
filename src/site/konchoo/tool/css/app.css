@@ -1,0 +1,89 @@
+#container {
+    -fx-background-color: #232323;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
+}
+
+.label {
+    -fx-text-fill: lightyellow;
+}
+
+.button {
+    -fx-text-fill: whitesmoke;
+    -fx-background-color: #222422;
+    -fx-border-width: 3;
+    -fx-border-color: #444444;
+    -fx-border-radius: 6;
+    -fx-border-insets: -2;
+}
+
+.button:hover {
+    -fx-background-color: #6a7e6a;
+    -fx-text-fill: whitesmoke;
+    -fx-border-color: #464646;
+}
+
+.text-field {
+    -fx-border-color: #f887ff;
+    -fx-border-radius: 5;
+    -fx-border-insets: -2;
+    -fx-text-fill: #321450;
+}
+
+.date-picker .label {
+    -fx-text-fill: black;
+}
+
+.date-picker .button {
+    -fx-border-width: 0;
+}
+
+.selected-file-info-label {
+    -fx-text-fill: grey;
+}
+
+.text-area {
+    -fx-text-fill: whitesmoke;
+    -fx-font-size: 12;
+    -fx-font-weight: lighter;
+    -fx-background-color: #232323;
+    -fx-border-width: 0;
+    -fx-border-color: #232323;
+}
+
+
+.text-area .content {
+    -fx-background-color: #232323;
+    -fx-border-color: #303030;
+}
+
+.text-area .scroll-bar {
+    -fx-background-color: #321450;
+    -fx-border-radius: 2;
+}
+
+.text-area .scroll-bar .thumb {
+    -fx-background-color: #6a7e6a;
+}
+
+.check-box {
+    -fx-text-fill: whitesmoke;
+    -fx-font-size: 12;
+}
+
+.check-box .box {
+    -fx-border-width: 1;
+    -fx-border-color: #28a3f4;
+    -fx-border-radius: 4;
+    -fx-border-insets: -1;
+    -fx-font-size: 12;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #28a3f4;
+}

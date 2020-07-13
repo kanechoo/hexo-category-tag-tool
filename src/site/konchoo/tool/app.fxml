@@ -1,0 +1,97 @@
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane fx:controller="site.konchoo.tool.controller.AppController"
+          xmlns:fx="http://javafx.com/fxml" alignment="TOP_CENTER" hgap="10" vgap="10" fx:id="container"
+          stylesheets="@css/app.css">
+    <Label text="select your markdown file ..." GridPane.rowIndex="0" GridPane.columnIndex="0" minWidth="370"
+           alignment="CENTER">
+        <padding>
+            <Insets>
+                <top>5</top>
+                <left>5</left>
+                <right>5</right>
+                <bottom>5</bottom>
+            </Insets>
+        </padding>
+    </Label>
+    <Button fx:id="selectFileButton" text="select files" GridPane.rowIndex="1" GridPane.columnIndex="0"
+            minWidth="370">
+        <padding>
+            <Insets>
+                <top>5</top>
+                <left>5</left>
+                <right>5</right>
+                <bottom>5</bottom>
+            </Insets>
+        </padding>
+    </Button>
+    <Label fx:id="fileInfoLabel" text=" 0 markdown files was selected" GridPane.rowIndex="2" GridPane.columnIndex="0"
+           minWidth="370"
+           textFill="gray" alignment="CENTER" styleClass="selected-file-info-label">
+        <padding>
+            <Insets>
+                <top>5</top>
+                <left>5</left>
+                <right>5</right>
+                <bottom>5</bottom>
+            </Insets>
+        </padding>
+    </Label>
+    <Label text="categories(use # to split multi layer category values)" GridPane.rowIndex="3" GridPane.columnIndex="0"
+           minWidth="370" alignment="CENTER">
+        <padding>
+            <Insets>
+                <top>5</top>
+                <left>5</left>
+                <right>5</right>
+                <bottom>5</bottom>
+            </Insets>
+        </padding>
+    </Label>
+    <TextField fx:id="categoriesTextField" minWidth="370" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <Label text="tags(use # to split multi values)" GridPane.rowIndex="5" GridPane.columnIndex="0"
+           minWidth="370" alignment="CENTER">
+        <padding>
+            <Insets>
+                <top>5</top>
+                <left>5</left>
+                <right>5</right>
+                <bottom>5</bottom>
+            </Insets>
+        </padding>
+    </Label>
+    <TextField fx:id="tagsTextField" minWidth="370" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <Label text="select markdown file show date(optional)" GridPane.rowIndex="7" GridPane.columnIndex="0"
+           minWidth="370" alignment="CENTER">
+        <padding>
+            <Insets>
+                <top>5</top>
+                <left>5</left>
+                <right>5</right>
+                <bottom>5</bottom>
+            </Insets>
+        </padding>
+    </Label>
+    <DatePicker fx:id="datePicker" styleClass="date-picker" minWidth="370" GridPane.rowIndex="8"
+                GridPane.columnIndex="0" editable="false"/>
+    <HBox GridPane.rowIndex="9" GridPane.columnIndex="0" minWidth="370" spacing="20" alignment="CENTER">
+        <CheckBox fx:id="createdTimeCheckBox">Created Time</CheckBox>
+        <CheckBox fx:id="lastModifyTimeCheckBox">Last Modify Time</CheckBox>
+    </HBox>
+    <Button fx:id="submitButton" text="Submit" GridPane.rowIndex="11" GridPane.columnIndex="0"
+            minWidth="370">
+        <padding>
+            <Insets>
+                <top>5</top>
+                <left>5</left>
+                <right>5</right>
+                <bottom>5</bottom>
+            </Insets>
+        </padding>
+    </Button>
+    <Label GridPane.rowIndex="12" GridPane.columnIndex="0" text="logs:"/>
+    <TextArea GridPane.rowIndex="13"
+              GridPane.columnIndex="0" fx:id="logInfoTextArea"
+              editable="false" minWidth="370" maxWidth="370" minHeight="200"/>
+</GridPane>
